@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌹 Happy Rose Day 🌹</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='heart_animation.js') }}"></script>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename='love_bg.mp4') }}" type="video/mp4">
+    </video>
+    <div class="container">
+        <!-- Glowing Rose -->
+        <div class="rose-container">
+            <img src="{{ url_for('static', filename='heart.gif') }}" alt="Glowing Rose" class="glowing-rose">
+        </div>
+
+        <!-- Rose Day Message -->
+        <div class="content">
+            <h1>🌹 Happy Rose Day, My Love! 🌹</h1>
+            <p>{{ message }}</p>
+        </div>
+
+        <!-- Floating Hearts Animation -->
+        <!-- <div class="floating-hearts">
+            <script>
+                for (let i = 0; i < 20; i++) {
+                    let heart = document.createElement("div");
+                    heart.innerHTML = "❤️";
+                    heart.style.position = "absolute";
+                    heart.style.left = Math.random() * 100 + "vw";
+                    heart.style.animation = "float 5s linear infinite";
+                    document.body.appendChild(heart);
+                }
+            </script>
+        </div> -->
+    </div>
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="{{ url_for('static', filename='music.mp3') }}" type="audio/mp3">
+    </audio>
+
+    <br><br>
+    <a href="/">⬅ Back to Home</a>
+
+</body>
+</html>

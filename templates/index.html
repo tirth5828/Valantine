@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine’s Week Celebration 💖</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='heart_animation.js') }}"></script>
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename='love_bg.mp4') }}" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <h1>💖 Welcome to Our Valentine’s Week 💖</h1>
+        <p>Let's celebrate love every single day! 🌹✨</p>
+
+        <ul class="days-list">
+            <li><a href="/rose_day">🌹 Rose Day</a></li>
+            <li><a href="/propose_day">💍 Propose Day</a></li>
+            <li><a href="/chocolate_day">🍫 Chocolate Day</a></li>
+            <li><a href="/teddy_day">🧸 Teddy Day</a></li>
+            <li><a href="/promise_day">🤝 Promise Day</a></li>
+            <li><a href="/hug_day">🤗 Hug Day</a></li>
+            <li><a href="/kiss_day">💋 Kiss Day</a></li>
+            <li><a href="/valentines_day">💖 Valentine's Day</a></li>
+        </ul>
+
+        <!-- Love Calculator with Enhanced UI -->
+        <div class="love-calc">
+            <h2>💖 Love Compatibility Test 💑</h2>
+            <p class="love-subtext">Let's check our love percentage! Enter names and see the magic. ✨</p>
+
+            <form action="/love-calculator" method="POST">
+                <div class="input-container">
+                    <input type="text" name="name1" placeholder="Your Name" required>
+                    <input type="text" name="name2" placeholder="Partner's Name" required>
+                </div>
+                <button type="submit" class="love-btn">💘 Calculate Love ❤️</button>
+            </form>
+
+            {% if error %}
+                <p class="love-error">🚫 {{ error }}</p>
+            {% elif love_score %}
+                <p class="love-result">💖 Princess & Jadu have a 100000000% Love Match! 💑</p>
+            {% endif %}
+        </div>
+
+    </div>
+    <audio autoplay loop>
+        <source src="{{ url_for('static', filename='music.mp3') }}" type="audio/mp3">
+    </audio>
+</body>
+</html>

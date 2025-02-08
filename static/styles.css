@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+h1 {
+    margin-top: 20px;
+    font-size: 50px;
+    color: pink;
+}
+p {
+    font-size: 20px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin: 10px 0;
+}
+a {
+    text-decoration: none;
+    color: #ff3366;
+    font-size: 20px;
+    font-weight: bold;
+}
+.container {
+    position: relative;
+    z-index: 2;
+}
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(40%);
+}
+.love-calc {
+    margin-top: 20px;
+}
+.love-result {
+    font-size: 24px;
+    color: pink;
+}
